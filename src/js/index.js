@@ -16,7 +16,10 @@ const searchController = async() =>{
 
       await state.search.getResult();
 
+      searchView.clearInput();
+      searchView.clearResults();
       searchView.displayResults(state.search.data);
+      
     }else{
         alert("you must enter a keyword");
     }
