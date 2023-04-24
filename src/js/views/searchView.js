@@ -11,12 +11,12 @@ export const clearResults = () => {
 export const displayResults = data =>{
     data.results.forEach(movie => {
         const html = `
-        <li class="media mb-3">
-            <img src="https://image.tmdb.org/t/p/w92/${movie.poster_path}" class="mr-3" alt="${movie.title}">
+        <li class="media mb-3" style="display:flex">
+            <img src="https://image.tmdb.org/t/p/w92/${movie.poster_path}" style="margin-right:10px" alt="${movie.title}">
             <div class="media-body">
                 <h5 class="mt-0 mb-1">
-                <span class="badge badge-primary">${movie.vote_average}</span> 
-                ${movie.title}
+                <span class="badge bg-primary">${movie.vote_average}</span> 
+                <a href="#${movie.id}">${movie.title}</a>
                 </h5>
                 <p>${movie.overview}</p>
             </div>
